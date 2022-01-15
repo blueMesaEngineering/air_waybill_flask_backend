@@ -18,9 +18,9 @@ class ShippersAPI(Resource):
     return {'id': str(id)}, 200
 
 class ShipperAPI(Resource):
-  def get(self, companyName):
-    print(companyName, sys.stdout)
-    shipper = Shipper.objects.get(companyName = companyName).to_json()
+  def get(self, id):
+    # print(companyName, sys.stdout)
+    shipper = Shipper.objects.get(id = id).to_json()
     return Response(shipper, mimetype="application/json", status=200)
   
   def put(self, id):
@@ -32,3 +32,16 @@ class ShipperAPI(Resource):
   def delete(self, id):
     shipper = Shipper.objects.get(id = id)
     shipper.delete()
+    return '', 200
+
+  def getCompanyName(self, companyName):
+    shipper = Shipper.objects.get(companyName = companyName).to_json()
+    return Response(shipper, mimetype="application/json", status=200)
+  
+class ShipperAPICompanyName(Resource):
+  def get(self, companyname):
+    shipper = Shipper.objects.get(companyname = companyname)
+    return Response(shipper, mimetype="application/json", status=200)
+
+    
+    
