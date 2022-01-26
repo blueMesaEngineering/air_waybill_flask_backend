@@ -1,11 +1,23 @@
 from .db import db
 
-class Shipper(db.Document):
-  firstName = db.StringField(required=True)
-  middleName = db.StringField(required=True)
-  lastName = db.StringField(required=True)
-  companyName = db.StringField(required=True, unique=True)
-  streetAddress1 = db.StringField(required=True)
-  streetAddress2 = db.StringField(required=True)
-  city = db.StringField(required=True)
-  state = db.StringField(required=True)
+class AirWaybill(db.Document):
+  
+  # Shipper Data
+  shipperFirstName = db.StringField(required=True)
+  shipperMiddleName = db.StringField(required=True)
+  shipperLastName = db.StringField(required=True)
+  shipperCompanyName = db.StringField(required=True, unique=True)
+  shipperStreetAddress1 = db.StringField(required=True)
+  shipperStreetAddress2 = db.StringField(required=True)
+  shipperCity = db.StringField(required=True)
+  shipperState = db.StringField(required=True)
+  
+  # Consignee Data
+  consigneeFirstName = db.StringField(required=True)
+  consigneeMiddleName = db.StringField(required=True)
+  consigneeLastName = db.StringField(required=True)
+  consigneeCompanyName = db.StringField(required=True, unique=True)
+  consigneeStreetAddress1 = db.StringField(required=True)
+  consigneeStreetAddress2 = db.StringField(required=True)
+  consigneeCity = db.StringField(required=True)
+  consigneeState = db.StringField(required=True)
