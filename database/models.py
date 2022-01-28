@@ -10,7 +10,7 @@ class AirWaybill(db.Document):
   shipperStreetAddress1 = db.StringField(required=True)
   shipperStreetAddress2 = db.StringField(required=True)
   shipperCity = db.StringField(required=True)
-  shipperState = db.StringField(required=True)
+  shipperStateUSA = db.StringField(required=True)
   
   # Consignee Data
   consigneeFirstName = db.StringField(required=True)
@@ -20,4 +20,4 @@ class AirWaybill(db.Document):
   consigneeStreetAddress1 = db.StringField(required=True)
   consigneeStreetAddress2 = db.StringField(required=True)
   consigneeCity = db.StringField(required=True)
-  consigneeState = db.StringField(required=True)
+  consigneeStateUSA = db.StringField(required=True)
