@@ -33,15 +33,5 @@ class AirWaybillAPI(Resource):
     airWaybill = AirWaybill.objects.get(id = id)
     airWaybill.delete()
     return '', 200
-
-  def getCompanyName(self, companyName):
-    airWaybill = AirWaybill.objects.get(companyName = companyName).to_json()
-    return Response(airWaybill, mimetype="application/json", status=200)
-  
-class AirWaybillAPICompanyName(Resource):
-  def get(self, companyname):
-    airWaybill = AirWaybill.objects.get(companyname = companyname)
-    return Response(airWaybill, mimetype="application/json", status=200)
-
     
     

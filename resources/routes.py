@@ -1,9 +1,9 @@
 
 
 
-from .airWaybill import AirWaybillAPI, AirWaybillsAPI, AirWaybillAPICompanyName
-from .shipper import ShipperAPI, ShippersAPI, ShipperAPICompanyName
-from .consignee import ConsigneeAPI, ConsigneesAPI, ConsigneeAPICompanyName
+from .airWaybill import AirWaybillAPI, AirWaybillsAPI
+from .shipper import ShipperAPI, ShippersAPI
+from .consignee import ConsigneeAPI, ConsigneesAPI
 
 
 def initialize_routes(api):

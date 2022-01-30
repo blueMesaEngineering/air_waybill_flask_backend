@@ -34,14 +34,14 @@ class ShipperAPI(Resource):
     shipper.delete()
     return '', 200
 
-  def getCompanyName(self, shipperCompanyName):
-    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
-    return Response(shipper, mimetype="application/json", status=200)
+  # def getCompanyName(self, shipperCompanyName):
+  #   shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
+  #   return Response(shipper, mimetype="application/json", status=200)
   
-class ShipperAPICompanyName(Resource):
-  def get(self, companyname):
-    shipper = Shipper.objects.get(companyname = companyname)
-    return Response(shipper, mimetype="application/json", status=200)
+# class ShipperAPICompanyName(Resource):
+#   def get(self, companyname):
+#     shipper = Shipper.objects.get(companyname = companyname)
+#     return Response(shipper, mimetype="application/json", status=200)
 
     
     

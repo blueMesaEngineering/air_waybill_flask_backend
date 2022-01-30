@@ -34,14 +34,14 @@ class ConsigneeAPI(Resource):
     consignee.delete()
     return '', 200
 
-  def getCompanyName(self, companyName):
-    consignee = Consignee.objects.get(companyName = companyName).to_json()
-    return Response(consignee, mimetype="application/json", status=200)
+#   def getCompanyName(self, companyName):
+#     consignee = Consignee.objects.get(companyName = companyName).to_json()
+#     return Response(consignee, mimetype="application/json", status=200)
   
-class ConsigneeAPICompanyName(Resource):
-  def get(self, companyname):
-    consignee = Consignee.objects.get(companyname = companyname)
-    return Response(consignee, mimetype="application/json", status=200)
+# class ConsigneeAPICompanyName(Resource):
+#   def get(self, companyname):
+#     consignee = Consignee.objects.get(companyname = companyname)
+#     return Response(consignee, mimetype="application/json", status=200)
 
     
     
