@@ -13,7 +13,7 @@ def initialize_routes(api):
   
   api.add_resource(ShippersAPI, '/api/shippers')
   api.add_resource(ShipperAPI, '/api/shippers/<id>')
-  api.add_resource(ShipperAPICompanyName, '/api/shippers/<companyName>')
+  api.add_resource(ShipperAPICompanyName, '/api/shippers/<shipperCompanyName>')
   
   api.add_resource(ConsigneesAPI, '/api/consignees')
   api.add_resource(ConsigneeAPI, '/api/consignees/<id>')

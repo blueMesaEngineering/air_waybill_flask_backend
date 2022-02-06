@@ -37,8 +37,8 @@ class ShipperAPI(Resource):
   #   return Response(shipper, mimetype="application/json", status=200)
   
 class ShipperAPICompanyName(Resource):
-  def get(self, companyname):
-    shipper = Shipper.objects.get(companyname = companyname)
+  def get(self, shipperCompanyName):
+    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName)
     return Response(shipper, mimetype="application/json", status=200)
 
     
