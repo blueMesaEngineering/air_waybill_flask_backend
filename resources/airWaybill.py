@@ -1,7 +1,6 @@
 from flask import Response, request
 from database.models import AirWaybill
 from flask_restful import Resource
-# from __future__ import print_function
 import sys
 
 class AirWaybillsAPI(Resource):
@@ -19,7 +18,6 @@ class AirWaybillsAPI(Resource):
 
 class AirWaybillAPI(Resource):
   def get(self, id):
-    # print(companyName, sys.stdout)
     airWaybill = AirWaybill.objects.get(id = id).to_json()
     return Response(airWaybill, mimetype="application/json", status=200)
   

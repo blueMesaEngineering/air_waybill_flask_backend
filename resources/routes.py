@@ -2,7 +2,7 @@
 
 
 from .airWaybill import AirWaybillAPI, AirWaybillsAPI
-from .shipper import ShipperAPI, ShippersAPI
+from .shipper import ShipperAPICompanyName, ShipperAPI, ShippersAPI
 from .consignee import ConsigneeAPI, ConsigneesAPI
 
 
@@ -13,8 +13,8 @@ def initialize_routes(api):
   
   api.add_resource(ShippersAPI, '/api/shippers')
   api.add_resource(ShipperAPI, '/api/shippers/<id>')
-  # api.add_resource(ShipperAPICompanyName, '/api/shippers/<companyName>')
+  api.add_resource(ShipperAPICompanyName, '/api/shippers/<companyName>')
   
-  api.add_resource(ConsigneesAPI, '/api/airWaybills')
+  api.add_resource(ConsigneesAPI, '/api/consignees')
   api.add_resource(ConsigneeAPI, '/api/consignees/<id>')
   # api.add_resource(ConsigneeAPICompanyName, '/api/consignees/<companyName>')

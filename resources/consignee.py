@@ -1,7 +1,6 @@
 from flask import Response, request
 from database.models import Consignee
 from flask_restful import Resource
-# from __future__ import print_function
 import sys
 
 class ConsigneesAPI(Resource):
@@ -19,7 +18,6 @@ class ConsigneesAPI(Resource):
 
 class ConsigneeAPI(Resource):
   def get(self, id):
-    # print(companyName, sys.stdout)
     consignee = Consignee.objects.get(id = id).to_json()
     return Response(consignee, mimetype="application/json", status=200)
   

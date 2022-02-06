@@ -1,7 +1,6 @@
 from flask import Response, request
 from database.models import Shipper
 from flask_restful import Resource
-# from __future__ import print_function
 import sys
 
 class ShippersAPI(Resource):
@@ -19,7 +18,6 @@ class ShippersAPI(Resource):
 
 class ShipperAPI(Resource):
   def get(self, id):
-    # print(companyName, sys.stdout)
     shipper = Shipper.objects.get(id = id).to_json()
     return Response(shipper, mimetype="application/json", status=200)
   
@@ -38,10 +36,10 @@ class ShipperAPI(Resource):
   #   shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
   #   return Response(shipper, mimetype="application/json", status=200)
   
-# class ShipperAPICompanyName(Resource):
-#   def get(self, companyname):
-#     shipper = Shipper.objects.get(companyname = companyname)
-#     return Response(shipper, mimetype="application/json", status=200)
+class ShipperAPICompanyName(Resource):
+  def get(self, companyname):
+    shipper = Shipper.objects.get(companyname = companyname)
+    return Response(shipper, mimetype="application/json", status=200)
 
     
     
