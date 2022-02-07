@@ -1,7 +1,13 @@
 from flask import Response, request
 from database.models import Shipper
 from flask_restful import Resource
+import logging
 import sys
+
+
+logger = logging.getLogger('werkzeug') 
+handler = logging.FileHandler('test.log') 
+logger.addHandler(handler)
 
 class ShippersAPI(Resource):
   def get(self):
@@ -21,6 +27,10 @@ class ShipperAPI(Resource):
     shipper = Shipper.objects.get(id = id).to_json()
     return Response(shipper, mimetype="application/json", status=200)
   
+  # def getByShipperCompanyName(self, shipperCompanyName):
+  #   shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
+  #   return Response(shipper, mimetype="application/json", status=200)
+  
   def put(self, id):
     shipper = Shipper.objects.get(id = id)
     body = request.get_json()
@@ -38,7 +48,8 @@ class ShipperAPI(Resource):
   
 class ShipperAPICompanyName(Resource):
   def get(self, shipperCompanyName):
-    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName)
+    logger.info("Entering get of ShipperAPICompanyName")
+    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
     return Response(shipper, mimetype="application/json", status=200)
 
     
