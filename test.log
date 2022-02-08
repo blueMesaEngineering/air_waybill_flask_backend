@@ -4,3 +4,45 @@
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 127.0.0.1 - - [06/Feb/2022 20:45:34] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
 127.0.0.1 - - [06/Feb/2022 20:45:34] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [07/Feb/2022 18:04:25] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:04:25] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:04:46] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 18:04:46] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [07/Feb/2022 18:08:12] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:12] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:28] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:28] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:45] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:45] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:08:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 18:09:01] "GET /api/shippers HTTP/1.1" 200 -
+127.0.0.1 - - [07/Feb/2022 18:09:01] "GET /api/shippers HTTP/1.1" 200 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [07/Feb/2022 19:04:37] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 19:04:37] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 19:04:41] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 19:04:41] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 19:04:54] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 19:04:54] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [07/Feb/2022 19:09:32] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 19:09:32] "[33mGET /api/shippers/?shipperCompanyName=Blue%20Mesa%20Engineering HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 19:09:50] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 19:09:50] "[35m[1mGET /api/shippers/Blue%20Mesa%20Engineering HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 19:10:05] "[35m[1mGET /api/shippers/'Blue%20Mesa%20Engineering' HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 19:10:05] "[35m[1mGET /api/shippers/'Blue%20Mesa%20Engineering' HTTP/1.1[0m" 500 -
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [07/Feb/2022 20:04:03] "[35m[1mGET /api/shippers/Nathan HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 20:04:03] "[35m[1mGET /api/shippers/Nathan HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 20:04:15] "[35m[1mGET /api/shippers/shipperFirstName HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 20:04:15] "[35m[1mGET /api/shippers/shipperFirstName HTTP/1.1[0m" 500 -
+127.0.0.1 - - [07/Feb/2022 20:04:29] "[33mGET /api/shippers/?shipperFirstName=Nathan HTTP/1.1[0m" 404 -
+127.0.0.1 - - [07/Feb/2022 20:04:29] "[33mGET /api/shippers/?shipperFirstName=Nathan HTTP/1.1[0m" 404 -

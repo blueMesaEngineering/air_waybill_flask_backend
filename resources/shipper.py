@@ -27,10 +27,6 @@ class ShipperAPI(Resource):
     shipper = Shipper.objects.get(id = id).to_json()
     return Response(shipper, mimetype="application/json", status=200)
   
-  # def getByShipperCompanyName(self, shipperCompanyName):
-  #   shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
-  #   return Response(shipper, mimetype="application/json", status=200)
-  
   def put(self, id):
     shipper = Shipper.objects.get(id = id)
     body = request.get_json()
@@ -49,7 +45,7 @@ class ShipperAPI(Resource):
 class ShipperAPICompanyName(Resource):
   def get(self, shipperCompanyName):
     logger.info("Entering get of ShipperAPICompanyName")
-    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
+    shipper = Shipper.objects.get(shipperFirstName = 'Nathan').to_json()
     return Response(shipper, mimetype="application/json", status=200)
 
     
