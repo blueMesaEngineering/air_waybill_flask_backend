@@ -1,0 +1,5 @@
+20220211:1852
+
+Notes:
+
+It may be that in order to utilize flask_restful, I need to make a call to the database to find the id of the record with a given shipperCompanyName as a parameter.  The method call would return an id, and with that id, I can send the shippers endpoint a request for the record with that id.
