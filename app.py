@@ -3,9 +3,11 @@ from flask_cors import CORS, cross_origin
 from database.db import initialize_db
 from resources.routes import initialize_routes
 from flask_restful import Api
+from flask_marshmallow import Marshmallow
 import logging
 
 app = Flask(__name__)
+ma = Marshmallow(app)
 
 logger = logging.getLogger('werkzeug') 
 handler = logging.FileHandler('test.log') 
@@ -23,5 +25,20 @@ app.config['MONGODB_SETTINGS'] = {
 
 initialize_db(app)
 initialize_routes(api)
+
+
+class ShipperSchema(ma.Schema):
+  class Meta:
+    fields = ("shipperFirstName", "shipperMiddleName", "shipperLastName", "shipperCompanyName", "shipperStreetAddress1", "shipperStreetAddress2", "shipperCity", "shipperStateUSA")
+    
+  _links = ma.Hyperlinks(
+    {
+      "self": ma.URLFor("shipper_detail", values=dict(id="<id>")),
+      "collection": ma.URLFor("shippers")
+    }
+  )
+
+shipper_schema = ShipperSchema()
+shippers_schema = ShipperSchema(many = True)
 
 app.run()

@@ -14,6 +14,8 @@ class ShippersAPI(Resource):
     print("Entering get for ShippersAPI", sys.stdout)
     shippers = Shipper.objects().to_json()
     return Response(shippers, mimetype="application/json", status=200)
+    # shippers = Shipper.all()
+    # return shipper_schema.dump(shippers)
 
   def post(self):
     body = request.get_json(force = True)
@@ -38,8 +40,8 @@ class ShipperAPI(Resource):
     shipper.delete()
     return '', 200
 
-class ShipperAPICompanyName(Resource):
-  def get(self, shipperCompanyName):
-    logger.info("Entering get of ShipperAPICompanyName")
-    shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
-    return Response(shipper, mimetype="application/json", status=200)   
+# class ShipperAPICompanyName(Resource):
+#   def get(self, shipperCompanyName):
+#     logger.info("Entering get of ShipperAPICompanyName")
+#     shipper = Shipper.objects.get(shipperCompanyName = shipperCompanyName).to_json()
+#     return Response(shipper, mimetype="application/json", status=200)   
