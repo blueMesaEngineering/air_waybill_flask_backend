@@ -64,3 +64,31 @@
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/Apr/2022 20:53:37] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 20:53:37] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 20:53:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 20:53:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 20:53:44] "GET /api/shippers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 20:53:44] "GET /api/shippers HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 20:53:50] "GET /api/consignees HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 20:53:50] "GET /api/consignees HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 21:07:53] "[33mOPTIONS /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:07:53] "[33mOPTIONS /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:04] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:04] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:29] "OPTIONS /api/airWaybills HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 21:08:29] "OPTIONS /api/airWaybills HTTP/1.1" 200 -
+127.0.0.1 - - [26/Apr/2022 21:08:29] "[35m[1mPOST /api/airWaybills HTTP/1.1[0m" 500 -
+127.0.0.1 - - [26/Apr/2022 21:08:29] "[35m[1mPOST /api/airWaybills HTTP/1.1[0m" 500 -
+127.0.0.1 - - [26/Apr/2022 21:08:31] "[35m[1mPOST /api/airWaybills HTTP/1.1[0m" 500 -
+127.0.0.1 - - [26/Apr/2022 21:08:31] "[35m[1mPOST /api/airWaybills HTTP/1.1[0m" 500 -
+127.0.0.1 - - [26/Apr/2022 21:08:54] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:08:54] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:12:41] "[33mOPTIONS /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:12:41] "[33mOPTIONS /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:12:54] "[33mGET /api/carriers HTTP/1.1[0m" 404 -
+127.0.0.1 - - [26/Apr/2022 21:12:54] "[33mGET /api/carriers HTTP/1.1[0m" 404 -

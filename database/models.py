@@ -42,3 +42,13 @@ class Consignee(db.Document):
   consigneeCity = db.StringField(required=True)
   consigneeStateUSA = db.StringField(required=True)
   
+class Carrier(db.Document):
+  carrierFirstName = db.StringField(required=True)
+  carrierMiddleName = db.StringField(required=True)
+  carrierLastName = db.StringField(required=True)
+  carrierCompanyName = db.StringField(required=True, unique=True)
+  carrierStreetAddress1 = db.StringField(required=True)
+  carrierStreetAddress2 = db.StringField(required=True)
+  carrierCity = db.StringField(required=True)
+  carrierStateUSA = db.StringField(required=True)
+  
