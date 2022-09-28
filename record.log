@@ -1,0 +1,5 @@
+2022-09-28 22:14:50,464 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-09-28 22:16:17,569 INFO werkzeug Thread-1 : 127.0.0.1 - - [28/Sep/2022 22:16:17] "[37mGET /api/shippers HTTP/1.1[0m" 200 -
+2022-09-28 22:20:14,639 INFO werkzeug Thread-2 : 127.0.0.1 - - [28/Sep/2022 22:20:14] "[37mGET /api/shippers HTTP/1.1[0m" 200 -
+2022-09-28 22:20:58,435 INFO werkzeug Thread-3 : 127.0.0.1 - - [28/Sep/2022 22:20:58] "[37mGET /api/carriers HTTP/1.1[0m" 200 -
+2022-09-28 22:21:09,518 INFO werkzeug Thread-4 : 127.0.0.1 - - [28/Sep/2022 22:21:09] "[37mGET /api/shippers HTTP/1.1[0m" 200 -

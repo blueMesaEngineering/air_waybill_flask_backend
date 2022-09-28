@@ -12,8 +12,11 @@ ma = Marshmallow(app)
 logger = logging.getLogger('werkzeug') 
 handler = logging.FileHandler('test.log') 
 logger.addHandler(handler)
+# logging.getLogger('flask_cors').level = logging.DEBUG
+logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
-cors = CORS(app)
+# cors = CORS(app)
+CORS(app)
 app.config.from_envvar('ENV_FILE_LOCATION')
 app.config['PROPAGATE_EXCEPTIONS']  # https://stackoverflow.com/questions/54648603/how-should-i-handle-exceptions-raised-in-jwt-required-decorator-in-flask-jwt
 app.config['CORS_HEADERS'] = 'Content-Type'
