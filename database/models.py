@@ -11,6 +11,7 @@ class AirWaybill(db.Document):
   shipperStreetAddress2 = db.StringField(required=True)
   shipperCity = db.StringField(required=True)
   shipperStateUSA = db.StringField(required=True)
+  shipperAccordionState = db.StringField(required=True)  
   
   # Consignee Data
   consigneeFirstName = db.StringField(required=True)
@@ -21,6 +22,7 @@ class AirWaybill(db.Document):
   consigneeStreetAddress2 = db.StringField(required=True)
   consigneeCity = db.StringField(required=True)
   consigneeStateUSA = db.StringField(required=True)
+  consigneeAccordionState = db.BooleanField(required=True, default=False)
   
 class Shipper(db.Document):
   shipperFirstName = db.StringField(required=True)
@@ -31,6 +33,7 @@ class Shipper(db.Document):
   shipperStreetAddress2 = db.StringField(required=True)
   shipperCity = db.StringField(required=True)
   shipperStateUSA = db.StringField(required=True)
+  shipperAccordionState = db.BooleanField(required=True, default=False)
   
 class Consignee(db.Document):
   consigneeFirstName = db.StringField(required=True)
@@ -41,6 +44,7 @@ class Consignee(db.Document):
   consigneeStreetAddress2 = db.StringField(required=True)
   consigneeCity = db.StringField(required=True)
   consigneeStateUSA = db.StringField(required=True)
+  consigneeAccordionState = db.BooleanField(required=True, default=False)
   
 class Carrier(db.Document):
   carrierFirstName = db.StringField(required=True)
@@ -51,4 +55,5 @@ class Carrier(db.Document):
   carrierStreetAddress2 = db.StringField(required=True)
   carrierCity = db.StringField(required=True)
   carrierStateUSA = db.StringField(required=True)
+  carrierAccordionState = db.BooleanField(required=True, default=False)
   
