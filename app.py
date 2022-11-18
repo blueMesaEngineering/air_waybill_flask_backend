@@ -44,4 +44,5 @@ class ShipperSchema(ma.Schema):
 shipper_schema = ShipperSchema()
 shippers_schema = ShipperSchema(many = True)
 
-app.run()
+if __name__ == "__main__":
+  app.run()
