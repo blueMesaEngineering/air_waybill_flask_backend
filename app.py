@@ -9,8 +9,8 @@ import logging
 app = Flask(__name__)
 ma = Marshmallow(app)
 
-logger = logging.getLogger('werkzeug') 
-handler = logging.FileHandler('test.log') 
+logger = logging.getLogger('werkzeug')
+handler = logging.FileHandler('test.log')
 logger.addHandler(handler)
 # logging.getLogger('flask_cors').level = logging.DEBUG
 logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
