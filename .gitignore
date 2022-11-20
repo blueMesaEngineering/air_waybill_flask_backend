@@ -1,0 +1,10 @@
+__pycache__/app.cpython-38.pyc
+database/__pycache__/db.cpython-38.pyc
+database/__pycache__/models.cpython-38.pyc
+record.log
+resources/__pycache__/airWaybill.cpython-38.pyc
+resources/__pycache__/carrier.cpython-38.pyc
+resources/__pycache__/consignee.cpython-38.pyc
+resources/__pycache__/routes.cpython-38.pyc
+resources/__pycache__/shipper.cpython-38.pyc
+test.log
