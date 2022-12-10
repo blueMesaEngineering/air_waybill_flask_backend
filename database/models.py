@@ -57,3 +57,6 @@ class Carrier(db.Document):
   carrierStateUSA = db.StringField(required=True)
   carrierAccordionState = db.BooleanField(required=True, default=False)
   
+class ShipperSearch(db.Document):
+  shipperFirstName = db.StringField(required=True)
+  shipperID = db.StringField(required=True)
