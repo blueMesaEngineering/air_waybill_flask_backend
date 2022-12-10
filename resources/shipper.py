@@ -1,6 +1,7 @@
 from flask import Response, request
 from database.models import Shipper
 from flask_restful import Resource
+from database.models import ShipperSearch
 import logging
 import sys
 
@@ -9,18 +10,19 @@ logger = logging.getLogger('werkzeug')
 handler = logging.FileHandler('test.log') 
 logger.addHandler(handler)
 
+
+
 class ShippersAPI(Resource):
   def get(self):
     print("Entering get for ShippersAPI", sys.stdout)
     shippers = Shipper.objects().to_json()
     return Response(shippers, mimetype="application/json", status=200)
-    # shippers = Shipper.all()
-    # return shipper_schema.dump(shippers)
 
   def post(self):
     body = request.get_json(force = True)
     shipper = Shipper(**body)
     shipper.save()
+    # shipperIndex = 
     id = shipper.id
     return {'id': str(id)}, 200
 

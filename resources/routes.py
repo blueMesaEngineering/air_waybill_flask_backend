@@ -3,6 +3,7 @@ from .airWaybill import AirWaybillAPI, AirWaybillsAPI
 from .shipper import ShipperAPI, ShippersAPI
 from .consignee import ConsigneeAPI, ConsigneesAPI
 from .carrier import CarrierAPI, CarriersAPI
+from .shipperSearch import ShipperSearchAPI
 
 
 def initialize_routes(api):
@@ -21,3 +22,5 @@ def initialize_routes(api):
   api.add_resource(CarriersAPI, '/api/carriers')
   api.add_resource(CarrierAPI, '/api/carriers/<id>')
   # api.add_resource(CarrierAPICompanyName, '/api/carriers/<companyName>')
+  
+  api.add_resource(ShipperSearchAPI, '/api/search')
