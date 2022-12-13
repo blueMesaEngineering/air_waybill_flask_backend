@@ -1,0 +1,8 @@
+The front end generates an AWB number.
+
+This unique identifier is entered on the AWB database document in MongoDB and on the AWBPDF.
+
+In order to be unique, a unique record must be created and kept of each new AWB number which is generated.
+
+Format: 12 digit or 16 digit (probably 16 digit) positive integer value.
+
