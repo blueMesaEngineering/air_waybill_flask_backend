@@ -60,3 +60,6 @@ class Carrier(db.Document):
 class ShipperSearch(db.Document):
   shipperFirstName = db.StringField(required=True)
   shipperID = db.StringField(required=True)
+  
+# class AirWaybillPDF(db.document):
+  

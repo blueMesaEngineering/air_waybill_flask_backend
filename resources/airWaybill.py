@@ -14,6 +14,7 @@ class AirWaybillsAPI(Resource):
     airWaybill = AirWaybill(**body)
     airWaybill.save()
     id = airWaybill.id
+    # <-- The code commands to insert the corresponding PDF into the PDF collection should probably go here. NDG 20221213:1948
     return {'id': str(id)}, 200
 
 class AirWaybillAPI(Resource):
