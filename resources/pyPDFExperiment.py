@@ -3,12 +3,17 @@ import io
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 
+# payload = [
+#   serialNumberAWBPDF = "1043 0894 5389 1062"
+# ]
+
 def setUpCanvas():
   packet = io.BytesIO()
   can = canvas.Canvas(packet, pagesize=letter)
   writeSerialNumberAWBPDF(can)
   writeShipper(can)
   writeConsignee(can)
+  writeCarrier(can)
   can.save()
   packet.seek(0)
   return packet
@@ -18,19 +23,26 @@ def writeSerialNumberAWBPDF(can):
   can.drawString(54, 356, "1043 0894 5389 1062")
 
 def writeShipper(can):
-  can.setFont('Times-Roman', 5)
+  can.setFont('Times-Roman', 4)
   can.drawString(30, 345, "Nathan D. Guthrie")
-  can.drawString(30, 340, "Blue Mesa Engineering")
-  can.drawString(30, 335, "101 Main St.")
-  can.drawString(30, 330, "Ste A")
-  can.drawString(30, 325, "Oregadaho, USA")
+  can.drawString(30, 341, "Blue Mesa Engineering")
+  can.drawString(30, 337, "101 Main St.")
+  can.drawString(30, 333, "Ste A")
+  can.drawString(30, 329, "Anytown, Oregadaho")
 
 def writeConsignee(can):
   can.drawString(30, 315, "Barry White")
-  can.drawString(30, 310, "Jazzersize")
-  can.drawString(30, 305, "1 Love Song Lane")
-  can.drawString(30, 300, "Ste A")
-  can.drawString(30, 295, "Oregadaho, USA")
+  can.drawString(30, 311, "Jazzersize")
+  can.drawString(30, 307, "1 Love Song Lane")
+  can.drawString(30, 303, "Ste A")
+  can.drawString(30, 298, "Amor, Ciudad")
+
+def writeCarrier(can):
+  can.setFont('Times-Roman', 4)
+  can.drawString(30, 284, "Huffland Duster")
+  can.drawString(30, 280, "Keystone Corp")
+  can.drawString(30, 276, "1 Keystone Ave.")
+  can.drawString(30, 272, "Macon, GA")
 
 packet = setUpCanvas()
 
