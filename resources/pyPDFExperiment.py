@@ -31,11 +31,12 @@ def writeShipper(can):
   can.drawString(30, 329, "Anytown, Oregadaho")
 
 def writeConsignee(can):
+  can.setFont('Times-Roman', 4)
   can.drawString(30, 315, "Barry White")
   can.drawString(30, 311, "Jazzersize")
   can.drawString(30, 307, "1 Love Song Lane")
   can.drawString(30, 303, "Ste A")
-  can.drawString(30, 298, "Amor, Ciudad")
+  can.drawString(30, 299, "Amor, Ciudad")
 
 def writeCarrier(can):
   can.setFont('Times-Roman', 4)
