@@ -24,3 +24,6 @@ def initialize_routes(api):
   # api.add_resource(CarrierAPICompanyName, '/api/carriers/<companyName>')
   
   api.add_resource(ShipperSearchAPI, '/api/search')
+  
+  api.add_resource(AirWaybillPDFCrossRefs, '/api/awbpdfx')
+  api.add_resource(AirWaybillPDFCrossRef, '/api/awbpdfx/<id>')

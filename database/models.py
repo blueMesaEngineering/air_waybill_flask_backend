@@ -61,5 +61,6 @@ class ShipperSearch(db.Document):
   shipperFirstName = db.StringField(required=True)
   shipperID = db.StringField(required=True)
   
-# class AirWaybillPDF(db.document):
-  
+class AirWaybillPDFCrossRef(db.document):
+  airWaybillSerialNumber = db.StringField(required=True)
+  airWaybillPDFID = db.StringField(required=True)
