@@ -4,26 +4,22 @@ from .shipper import ShipperAPI, ShippersAPI
 from .consignee import ConsigneeAPI, ConsigneesAPI
 from .carrier import CarrierAPI, CarriersAPI
 from .shipperSearch import ShipperSearchAPI
-
+from .airWaybillPDFCrossRef import AirWaybillPDFCrossRefAPI, AirWaybillPDFCrossRefsAPI
 
 def initialize_routes(api):
   api.add_resource(AirWaybillsAPI, '/api/airWaybills')
   api.add_resource(AirWaybillAPI, '/api/airWaybills/<id>')
-  # api.add_resource(AirWaybillAPICompanyName, '/api/airWaybills/<companyName>')
   
   api.add_resource(ShippersAPI, '/api/shippers')
   api.add_resource(ShipperAPI, '/api/shippers/<id>')
-  # api.add_resource(ShipperAPICompanyName, '/api/shippers/<shipperCompanyName>')
   
   api.add_resource(ConsigneesAPI, '/api/consignees')
   api.add_resource(ConsigneeAPI, '/api/consignees/<id>')
-  # api.add_resource(ConsigneeAPICompanyName, '/api/consignees/<companyName>')
   
   api.add_resource(CarriersAPI, '/api/carriers')
   api.add_resource(CarrierAPI, '/api/carriers/<id>')
-  # api.add_resource(CarrierAPICompanyName, '/api/carriers/<companyName>')
   
   api.add_resource(ShipperSearchAPI, '/api/search')
   
-  api.add_resource(AirWaybillPDFCrossRefs, '/api/awbpdfx')
-  api.add_resource(AirWaybillPDFCrossRef, '/api/awbpdfx/<id>')
+  api.add_resource(AirWaybillPDFCrossRefsAPI, '/api/awbpdfx')
+  api.add_resource(AirWaybillPDFCrossRefAPI, '/api/awbpdfx/<id>')

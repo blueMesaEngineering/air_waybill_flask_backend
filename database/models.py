@@ -2,6 +2,9 @@ from .db import db
 
 class AirWaybill(db.Document):
   
+  # AWB Serial Number
+  serialNumberAWBPDF = db.StringField(required=True)
+  
   # Shipper Data
   shipperFirstName = db.StringField(required=True)
   shipperMiddleName = db.StringField(required=True)
@@ -23,6 +26,17 @@ class AirWaybill(db.Document):
   consigneeCity = db.StringField(required=True)
   consigneeStateUSA = db.StringField(required=True)
   consigneeAccordionState = db.BooleanField(required=True, default=False)
+  
+  # Carrier Data
+  carrierFirstName = db.StringField(required=True)
+  carrierMiddleName = db.StringField(required=True)
+  carrierLastName = db.StringField(required=True)
+  carrierCompanyName = db.StringField(required=True, unique=True)
+  carrierStreetAddress1 = db.StringField(required=True)
+  carrierStreetAddress2 = db.StringField(required=True)
+  carrierCity = db.StringField(required=True)
+  carrierStateUSA = db.StringField(required=True)
+  carrierAccordionState = db.BooleanField(required=True, default=False)
   
 class Shipper(db.Document):
   shipperFirstName = db.StringField(required=True)
@@ -60,7 +74,7 @@ class Carrier(db.Document):
 class ShipperSearch(db.Document):
   shipperFirstName = db.StringField(required=True)
   shipperID = db.StringField(required=True)
-  
-class AirWaybillPDFCrossRef(db.document):
+
+class AirWaybillPDFCrossRef(db.Document):
   airWaybillSerialNumber = db.StringField(required=True)
   airWaybillPDFID = db.StringField(required=True)
