@@ -1,4 +1,4 @@
-from flask import Response, request
+from flask import Response, request, requests
 from database.models import AirWaybill
 from flask_restful import Resource
 import sys
@@ -14,6 +14,10 @@ class AirWaybillsAPI(Resource):
     airWaybill = AirWaybill(**body)
     airWaybill.save()
     id = airWaybill.id
+    url = "http://127.0.0.1:5000/api/airWaybills"
+    crossRef = {id, body['serialNumberAWBPDF'].strip()}
+    nextResponse = requests.post(url, json = crossRef)
+    print(nextResponse.text)
     # <-- The code commands to insert the corresponding PDF into the PDF collection should probably go here. NDG 20221213:1948
     return {'id': str(id)}, 200
 
