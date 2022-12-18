@@ -1,4 +1,5 @@
-from flask import Response, request, requests
+from flask import Response, request 
+import requests
 from database.models import AirWaybill
 from flask_restful import Resource
 import sys
@@ -7,9 +8,11 @@ class AirWaybillsAPI(Resource):
   def get(self):
     print("Entering get for AirWaybillsAPI", sys.stdout)
     airWaybills = AirWaybill.objects().to_json()
+    print("Leaving get for AirWaybillsAPI", sys.stdout)
     return Response(airWaybills, mimetype="application/json", status=200)
 
   def post(self):
+    print("Entering POST for AirWaybillsAPI", sys.stdout)
     body = request.get_json(force = True)
     airWaybill = AirWaybill(**body)
     airWaybill.save()
@@ -19,6 +22,7 @@ class AirWaybillsAPI(Resource):
     nextResponse = requests.post(url, json = crossRef)
     print(nextResponse.text)
     # <-- The code commands to insert the corresponding PDF into the PDF collection should probably go here. NDG 20221213:1948
+    print("Leaving POST for AirWaybillsAPI", sys.stdout)
     return {'id': str(id)}, 200
 
 class AirWaybillAPI(Resource):

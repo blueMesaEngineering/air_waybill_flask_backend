@@ -14,21 +14,26 @@ logger.addHandler(handler)
 
 class ShippersAPI(Resource):
   def get(self):
-    print("Entering get for ShippersAPI", sys.stdout)
+    print("Entering GET for ShippersAPI", sys.stdout)
     shippers = Shipper.objects().to_json()
+    print("Leaving GET for ShippersAPI", sys.stdout)
     return Response(shippers, mimetype="application/json", status=200)
 
   def post(self):
+    print("Entering POST for ShippersAPI", sys.stdout)
     body = request.get_json(force = True)
     shipper = Shipper(**body)
     shipper.save()
     # shipperIndex = 
     id = shipper.id
+    print("Leaving POST for ShippersAPI", sys.stdout)
     return {'id': str(id)}, 200
 
 class ShipperAPI(Resource):
   def get(self, id):
+    print("Entering GET for ShipperAPI", sys.stdout)
     shipper = Shipper.objects.get(id = id).to_json()
+    print("Leaving GET for ShippersAPI", sys.stdout)
     return Response(shipper, mimetype="application/json", status=200)
   
   def put(self, id):

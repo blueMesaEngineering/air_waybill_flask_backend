@@ -11,20 +11,25 @@ logger.addHandler(handler)
 
 class CarriersAPI(Resource):
   def get(self):
-    print("Entering get for CarriersAPI", sys.stdout)
+    print("Entering GET for CarriersAPI", sys.stdout)
     carriers = Carrier.objects().to_json()
+    print("Leaving GET for CarriersAPI", sys.stdout)
     return Response(carriers, mimetype="application/json", status=200)
 
   def post(self):
+    print("Entering POST for CarriersAPI", sys.stdout)
     body = request.get_json(force = True)
     carrier = Carrier(**body)
     carrier.save()
     id = carrier.id
+    print("Leaving POST for CarriersAPI", sys.stdout)
     return {'id': str(id)}, 200
 
 class CarrierAPI(Resource):
   def get(self, id):
+    print("Entering GET for CarrierAPI", sys.stdout)
     carrier = Carrier.objects.get(id = id).to_json()
+    print("Leaving GET for CarrierAPI", sys.stdout)
     return Response(carrier, mimetype="application/json", status=200)
   
   def put(self, id):
