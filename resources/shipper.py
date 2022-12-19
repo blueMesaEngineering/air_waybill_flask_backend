@@ -23,7 +23,10 @@ class ShippersAPI(Resource):
     print("Entering POST for ShippersAPI", sys.stdout)
     body = request.get_json(force = True)
     shipper = Shipper(**body)
+    print("Shipper(**body) succeeded", sys.stdout)
+    print(shipper.to_json(), sys.stdout)
     shipper.save()
+    print("shipper.save() succeeded", sys.stdout)
     # shipperIndex = 
     id = shipper.id
     print("Leaving POST for ShippersAPI", sys.stdout)
