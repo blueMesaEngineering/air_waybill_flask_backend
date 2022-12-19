@@ -14,13 +14,18 @@ class AirWaybillsAPI(Resource):
   def post(self):
     print("Entering POST for AirWaybillsAPI", sys.stdout)
     body = request.get_json(force = True)
+    print("request.get_json(force = True) succeeded", sys.stdout)
     airWaybill = AirWaybill(**body)
+    print("AirWaybill(**body) succeeded", sys.stdout)
+    print(airWaybill.to_json(), sys.stdout)
     airWaybill.save()
+    print("airWaybill.save() succeeded", sys.stdout)
     id = airWaybill.id
-    url = "http://127.0.0.1:5000/api/airWaybills"
-    crossRef = {id, body['serialNumberAWBPDF'].strip()}
-    nextResponse = requests.post(url, json = crossRef)
-    print(nextResponse.text)
+    print("airWaybill.id succeeded", sys.stdout)
+    # # url = "http://127.0.0.1:5000/api/airWaybills"
+    # crossRef = {id, body['serialNumberAWBPDF'].strip()}
+    # nextResponse = requests.post(url, json = crossRef)
+    # print(nextResponse.text)
     # <-- The code commands to insert the corresponding PDF into the PDF collection should probably go here. NDG 20221213:1948
     print("Leaving POST for AirWaybillsAPI", sys.stdout)
     return {'id': str(id)}, 200
