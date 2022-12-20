@@ -7,6 +7,7 @@ from flask_marshmallow import Marshmallow
 import logging
 
 app = Flask(__name__)
+app.debug = True
 ma = Marshmallow(app)
 
 logger = logging.getLogger('werkzeug')
