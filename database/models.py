@@ -3,7 +3,7 @@ from .db import db
 class AirWaybill(db.Document):
   
   # AWB Serial Number
-  # serialNumberAWBPDF = db.StringField(required=True)
+  serialNumberAWBPDF = db.StringField(required=True)
   
   # Shipper Data
   shipperFirstName = db.StringField(required=True)
