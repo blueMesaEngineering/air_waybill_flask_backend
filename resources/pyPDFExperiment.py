@@ -7,6 +7,34 @@ from reportlab.lib.pagesizes import letter
 #   serialNumberAWBPDF = "1043 0894 5389 1062"
 # ]
 
+shipperFirstName = "Nathan"
+shipperMiddleName = ""
+shipperLastName = "Guthrie"
+shipperCompanyName = "Blue Mesa Engineering"
+shipperStreetAddress1 = "101 Main St."
+shipperStreetAddress2 = "Ste A"
+shipperCity = "Anytown"
+shipperState = "Oregadaho"
+
+consigneeFirstName = "Barry"
+consigneeMiddleName = ""
+consigneeLastName = "White"
+consigneeCompanyName = "Jazzersize"
+consigneeStreetAddress1 = "1 Love Song Lane"
+consigneeStreetAddress2 = "Ste A"
+consigneeCity = "Amor"
+consigneeState = "Ciudad"
+
+carrierFirstName = "Huffland"
+carrierMiddleName = ""
+carrierLastName = "Duster"
+carrierCompanyName = "Keystone Corp"
+carrierStreetAddress1 = "1 Keystone Ave."
+carrierStreetAddress2 = ""
+carrierCity = "Macon"
+carrierState = "GA"
+
+
 def setUpCanvas():
   packet = io.BytesIO()
   can = canvas.Canvas(packet, pagesize=letter)
@@ -24,26 +52,42 @@ def writeSerialNumberAWBPDF(can):
 
 def writeShipper(can):
   can.setFont('Times-Roman', 4)
-  can.drawString(30, 345, "Nathan D. Guthrie")
-  can.drawString(30, 341, "Blue Mesa Engineering")
-  can.drawString(30, 337, "101 Main St.")
-  can.drawString(30, 333, "Ste A")
-  can.drawString(30, 329, "Anytown, Oregadaho")
+  if(shipperMiddleName != ""):
+    shipperName = shipperFirstName + " " + shipperMiddleName + " " + shipperLastName
+  else:
+    shipperName = shipperFirstName + " " + shipperLastName
+  can.drawString(30, 345, shipperName)
+  can.drawString(30, 341, shipperCompanyName)
+  can.drawString(30, 337, shipperStreetAddress1)
+  if(shipperStreetAddress2 != ""):
+    can.drawString(30, 333, shipperStreetAddress2)
+  can.drawString(30, 329, shipperCity + ", " + shipperState)
 
 def writeConsignee(can):
   can.setFont('Times-Roman', 4)
-  can.drawString(30, 315, "Barry White")
-  can.drawString(30, 311, "Jazzersize")
-  can.drawString(30, 307, "1 Love Song Lane")
-  can.drawString(30, 303, "Ste A")
-  can.drawString(30, 299, "Amor, Ciudad")
+  if(consigneeMiddleName != ""):
+    consigneeName = consigneeFirstName + " " + consigneeMiddleName + " " + consigneeLastName
+  else:
+    consigneeName = consigneeFirstName + " " + consigneeLastName
+  can.drawString(30, 345, consigneeName)
+  can.drawString(30, 341, consigneeCompanyName)
+  can.drawString(30, 337, consigneeStreetAddress1)
+  if(consigneeStreetAddress2 != ""):
+    can.drawString(30, 333, consigneeStreetAddress2)
+  can.drawString(30, 329, consigneeCity + ", " + consigneeState)
 
 def writeCarrier(can):
   can.setFont('Times-Roman', 4)
-  can.drawString(30, 284, "Huffland Duster")
-  can.drawString(30, 280, "Keystone Corp")
-  can.drawString(30, 276, "1 Keystone Ave.")
-  can.drawString(30, 272, "Macon, GA")
+  if(carrierMiddleName != ""):
+    carrierName = carrierFirstName + " " + carrierMiddleName + " " + carrierLastName
+  else:
+    carrierName = carrierFirstName + " " + carrierLastName
+  can.drawString(30, 345, carrierName)
+  can.drawString(30, 341, carrierCompanyName)
+  can.drawString(30, 337, carrierStreetAddress1)
+  if(carrierStreetAddress2 != ""):
+    can.drawString(30, 333, carrierStreetAddress2)
+  can.drawString(30, 329, carrierCity + ", " + carrierState)
 
 packet = setUpCanvas()
 
