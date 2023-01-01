@@ -22,7 +22,7 @@ class AirWaybillsAPI(Resource):
     print("airWaybill.save() succeeded", sys.stdout)
     id = airWaybill.id
     print("airWaybill.id succeeded", sys.stdout)
-    url = "http://127.0.0.1:5000/api/airWaybillPDFCrossRef"
+    url = "http://127.0.0.1:5000/api/airWaybillPDFCrossRefs"
     crossRef = { "airWaybillSerialNumber": str(id), "airWaybillPDFID": body['serialNumberAWBPDF'].strip()}
     nextResponse = requests.post(url, json = crossRef)
     print(nextResponse.text)
