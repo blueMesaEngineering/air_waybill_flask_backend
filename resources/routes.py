@@ -21,5 +21,5 @@ def initialize_routes(api):
   
   api.add_resource(ShipperSearchAPI, '/api/search')
   
-  api.add_resource(AirWaybillPDFCrossRefsAPI, '/api/awbpdfx')
-  api.add_resource(AirWaybillPDFCrossRefAPI, '/api/awbpdfx/<id>')
+  api.add_resource(AirWaybillPDFCrossRefsAPI, '/api/airWaybillPDFCrossRefs')
+  api.add_resource(AirWaybillPDFCrossRefAPI, '/api/airWaybillPDFCrossRefs/<id>')
